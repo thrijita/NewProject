@@ -53,7 +53,7 @@ public class DataMunger {
 	// getting the baseQuery and display
 	public String getBaseQuery(String queryString) {
 		//getting base query
-		String baseQuery="";
+		String baseQuery=null;
 		if(queryString.contains("where"))
 		{
 		baseQuery=(queryString.split("where")[0].trim());
@@ -62,6 +62,8 @@ public class DataMunger {
 		{
 			baseQuery=(queryString.split("order by|group by")[0].trim());	
 		}
+		
+		
 		
 		return baseQuery;
 
